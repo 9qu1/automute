@@ -172,7 +172,7 @@
           <span class="tile-emoji"><svg><use href="#i-plug"/></svg></span>
           <div>
             <h3>ボタン 1 つでつながる</h3>
-            <p>PC 版で遊ぶ人が「本家 Capture をつなぐ」を押すだけ。ふだん使っている AmongUsCapture がそのまま使えます。</p>
+            <p>PC 版で遊ぶ人が、パネルの「AmongUsCapture とつなぐ」を押すだけ。ふだん使っている AmongUsCapture がそのまま使えます。</p>
           </div>
         </div>
         <div class="discord-window" id="demo-connect">
@@ -197,8 +197,8 @@
       <article class="tile tile-safe reveal">
         <span class="tile-emoji"><svg><use href="#i-shield"/></svg></span>
         <h3>ミュートが残らない</h3>
-        <p>BOT がミュートした人を覚えていて、止めるときと次に動き出すときに必ず外します。困ったら全員分をすぐ外せます。</p>
-        <code class="cmd-chip">/unmute-all</code>
+        <p>BOT がミュートした人を覚えていて、止めるときと次に動き出すときに必ず外します。困ったらパネルのボタンで全員分をすぐ外せます。</p>
+        <code class="cmd-chip">🔊 全員のミュートを外す</code>
       </article>
 
       <article class="tile tile-link reveal">
@@ -286,7 +286,8 @@
       <h4><svg class="inline-icon"><use href="#i-wrench"/></svg>遊ぶときに要るもの</h4>
       <ul>
         <li>PC 版で遊ぶ人が 1 人以上。その PC に本家の <a href="https://github.com/automuteus/amonguscapture/releases" target="_blank" rel="noopener">AmongUsCapture</a>（ふだん AutoMuteUs を使っている人は入っています）</li>
-        <li>パネルの「つなぐ」→「本家 Capture をつなぐ」を、Among Us と同じ PC で押す</li>
+        <li>パネルの「AmongUsCapture とつなぐ」を、Among Us と同じ PC で押す</li>
+        <li>遊び終わったら、パネルの「終了」を押すか、そのままで大丈夫です（Capture が切れて 5 分、または VC が空になって 1 分で、パネルが小さく「終わりました」になります）</li>
         <li>11 人以上で遊ぶなら、ミュート専用の <a href="https://discord.com/oauth2/authorize?client_id=1565368374584803349&scope=bot&permissions=12583936" target="_blank" rel="noopener">AutoMute 2</a> も導入しておくと速くなります（オフライン表示のままで正常です）</li>
       </ul>
       <p>BOT に要る権限は「チャンネルを見る」「メッセージを送信」「メンバーをミュート」「メンバーのスピーカーをミュート」だけです。管理者の権限は使いません。</p>
@@ -308,7 +309,7 @@
       <div class="cmd-row"><code>/automute-start</code><span>いる VC をミュートの対象にする（1 回やれば覚える）</span></div>
       <div class="cmd-row"><code>/status</code><span>いまの状態を見る</span></div>
       <div class="cmd-row"><code>/panel</code><span>状態パネルを出し直す</span></div>
-      <div class="cmd-row"><code>/reader</code><span>読み取りアプリ・Capture の接続先を出す（本人にだけ）</span></div>
+      <div class="cmd-row"><code>/reader</code><span>AmongUsCapture の接続先（Host と Code）を出す（本人にだけ）</span></div>
       <div class="cmd-row"><code>/iam</code><span>自分のキャラ（ゲーム内の名前）を選ぶ</span></div>
       <div class="cmd-row"><code>/link</code><span>ほかの人とゲーム内の名前を紐付ける</span></div>
       <div class="cmd-row"><code>/unlink</code><span>紐付けを外す</span></div>
@@ -346,7 +347,7 @@
       </div>
       <div class="faq-item reveal">
         <h3>ミュートが外れなくなったら？</h3>
-        <p><code>/unmute-all</code> で全員分をすぐ外せます。止めておきたいときは <code>/pause</code>、また使うときは <code>/resume</code>。</p>
+        <p>パネルの「全員のミュートを外す」（または <code>/unmute-all</code>）で全員分をすぐ外せます。止めたいときは「終了」、また使うときは「再起動」。おかしくなったときも「再起動」でやり直せます。試合中の「終了」「全員のミュートを外す」は、押した人にだけ確認が出ます。</p>
       </div>
     </div>
   </section>

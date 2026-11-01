@@ -138,7 +138,7 @@ runDemoLoop("demo-panel", async (body) => {
   const embed = el(`
     <div class="embed panel ok">
       <div class="embed-title">🎮 オートミュート</div>
-      <div class="embed-desc">🟢 読み取りがつながっています</div>
+      <div class="embed-desc">🟢 AmongUsCapture がつながっています</div>
       <div class="embed-grid">
         <div class="embed-field"><div class="f-name">場面</div><div class="f-value">ロビー</div></div>
         <div class="embed-field"><div class="f-name">ルームコード</div><div class="f-value">ABCDEF</div></div>
@@ -175,23 +175,17 @@ runDemoLoop("demo-connect", async (body) => {
   const embed = el(`
     <div class="embed panel">
       <div class="embed-title">🎮 オートミュート</div>
-      <div class="embed-desc state">🔴 読み取りがつながっていません
-PC 版で遊ぶ人が「つなぐ」を押してください。</div>
-      <div class="btn-row"><button class="d-btn blue connect">🔌 つなぐ（PC 版で遊ぶ人）</button></div>
+      <div class="embed-desc state">🔴 AmongUsCapture がつながっていません
+PC 版で遊ぶ誰か 1 人が、Among Us と同じ PC で下の「AmongUsCapture とつなぐ」を押してください。</div>
+      <div class="btn-row"><button class="d-btn link cap">🔌 AmongUsCapture とつなぐ ↗</button></div>
+      <div class="btn-row"><button class="d-btn">⏹️ 終了</button><button class="d-btn">🔄 再起動</button><button class="d-btn">🔊 全員のミュートを外す</button></div>
     </div>`);
   m.querySelector(".msg-text").replaceChildren(embed);
   body.appendChild(m);
-  await sleep(1400);
-  const btn = embed.querySelector(".connect");
-  btn.classList.add("pressed");
-  await sleep(500);
-  const eph = botMsg();
-  eph.querySelector(".msg-text").innerHTML = `🔌 PC 版で遊ぶ人へ<div class="btn-row"><button class="d-btn link cap">本家 Capture をつなぐ ↗</button><button class="d-btn">読み取りアプリの接続コード</button></div><div class="ephemeral">👁 あなただけに表示されています</div>`;
-  body.appendChild(eph);
-  await sleep(1300);
-  const cap = eph.querySelector(".cap");
+  await sleep(1600);
+  const cap = embed.querySelector(".cap");
   cap.classList.add("pressed");
-  await sleep(1200);
+  await sleep(1400);
   embed.classList.add("ok");
-  embed.querySelector(".state").textContent = "🟢 読み取りがつながっています\n本家 Capture 1: 場面: ロビー";
+  embed.querySelector(".state").textContent = "🟢 AmongUsCapture がつながっています\n本家 Capture 1: 場面: ロビー";
 });
